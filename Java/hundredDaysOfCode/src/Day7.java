@@ -20,11 +20,24 @@ public class Day7 {
             }
         }
     }
+    public int[] buildArray(int[] nums) {
+        int[] out = new int[nums.length];
+        for(int i = 0; i<nums.length; i++){
+            out[i] = nums[nums[i]];
+        }
+        return out;
+    }
     public static void main(String[] args) {
         Day7 d = new Day7();
         int[] nums = {2,0,2,1,1,0};
         d.sortColors(nums);
         for(int i:nums){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+        int[] nums2 = {0,2,1,5,3,4};
+        int[] out = d.buildArray(nums2);
+        for(int i:out){
             System.out.print(i+" ");
         }
     }
