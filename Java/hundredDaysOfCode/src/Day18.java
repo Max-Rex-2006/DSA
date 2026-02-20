@@ -56,4 +56,16 @@ public class Day18 {
         }
         Arrays.sort(nums1);
     }
+    public static void main(String[] args) {
+        Day18 day18 = new Day18();
+        System.out.println(day18.convertToBase7(100));
+        System.out.println(day18.checkPerfectNumber(28));
+        System.out.println(day18.hasAlternatingBits(5));
+        System.out.println(day18.fib(10));
+        System.out.println(day18.mergeAlternately("abc", "pqr"));
+        int[] nums1 = {1, 2, 3, 0, 0, 0};
+        int[] nums2 = {2, 5, 6};
+        day18.merge(nums1, 3, nums2, 3);
+        System.out.println(Arrays.toString(nums1));
+    }
 }
