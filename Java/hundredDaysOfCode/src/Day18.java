@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Day18 {
     public String convertToBase7(int num) {
         return Integer.toString(num, 7);
