@@ -1,0 +1,19 @@
+public class Day33 {
+    public int minOperations(String s) {
+        int c1=0,c2=0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) - '0' != (i % 2)) {
+                c1++;
+            }
+            if (s.charAt(i) - '0' != (1 - (i % 2))) {
+                c2++;
+            }
+        }
+        return Math.min(c1,c2);
+    }
+    public static void main(String[] args) {
+        Day33 obj = new Day33();
+        String s = "0100";
+        System.out.println(obj.minOperations(s));
+    }
+}
